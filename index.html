@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="color.css">
+    <title>Mobile OnClick</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo/e1cb4e26-dc7c-47c5-ada4-9c9549b36ebb_200x200.png" alt="Mobile OnClick">
+
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Phone</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <img src="img/shopping.png" class="mobile" alt="">
+            <div class="overlay"> </div>
+            <div id="circle">
+                
+                <div class="feature one">
+                    <img src="img/LogoMakr_31RwkA.png" alt="battery" >
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000mAh, 720Hrs </p>
+                    </div>
+                </div>
+                    
+                <div class="feature two">
+                    <img src="img/camLogoMakr_87aAGh.png" alt="camera" >
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+
+                <div class="feature three">
+                    <img src="img/LopprogoMakr_6yXwXS.png" alt="processor" >
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdraogon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="img/disply.png" alt="display" >
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="controls">
+            <img src="img/newarrow.png" alt="up-arrow" id="upBtn">
+            <h3>Features</h3>
+            <img src="img/newarrow.png" alt="down-arrow" id="downBtn">
+        </div>
+    
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+    </script>
+</body>
+</html>
